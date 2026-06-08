@@ -1,0 +1,273 @@
+
+/*Varáveis*/
+
+:root {
+    --primary: #6366f1;
+    --primary-hover: #4f46e5;
+
+    --bg-main: #fff;
+    --bg-alt: #f3f4f6;
+    --surface: #fff;
+
+    --text-main: #111827;
+    --text-muted: #6b7280;
+
+    --border: #e5e7eb;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    --radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
+    /*Transição suave entre darkmode*/
+    transition: background-color 0.5s, color 0.5s;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+ul {
+    list-style: none;
+}
+
+/*Estilo do cabeçalho*/
+.header {
+    background-color: var(--bg-main);
+    border-bottom: 1px solid var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    z-index: 1000;
+}
+
+main {
+    padding-top: 70px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.nav-list {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.5s;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-main);
+    cursor: pointer;
+    display: flex;
+    transition: color 0.5s;
+}
+
+.icon-btn:hover {
+    color: var(--primary);
+}
+
+#menu-btn {
+    display: none;
+}
+
+/*Botões*/
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-weight: 600;
+    border-radius: var(--radius);
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: all 0.5s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+/*BANNER ROTATIVO*/
+.hero{
+    position: relative;
+    height: calc(100vh - 70px);
+    min-height: 500px;
+    background-color: #000;
+}
+
+.carousel{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    transition: opacity 0.8s ease;
+    opacity: 0;
+}
+
+.carousel-slide.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.carousel-bg{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter : brightness(0.5);
+    z-index: 1;
+}
+
+.carousel-content{
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 800px;
+}
+
+.carousel-content h1{
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.carousel-content p{
+    font-size: 1.25rem;
+    color: #cbd5e1;
+    margin-bottom: 40px;
+}
+
+.carousel-control{
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 2rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.carousel-control.next {
+    right: 20px;
+}
+
+.carousel-control.prev {
+    left: 20px;
+}
+
+.carousel-control:hover{
+    background: var(--primary-hover);
+}
+
+
+/*RESPONSIVIDADE*/
+@media(max-width : 768px) {
+
+    /*Mostra o ícone Menu mobile*/
+    #menu-btn {
+        display: flex;
+    }
+
+    /*Esconde o Menu principal*/
+    .d-none-mobile {
+        display: none;
+    }
+
+    .nav{
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--bg-main);
+        transition: right 0.4s ease;
+        padding-top: 40px;
+        border-top: 1px solid var(--border);
+    }
+
+    .nav-list{
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .nav.active{
+        right: 0;
+    }
+
+}

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TibiaAcademy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <i class="ph ph-sword"></i> TibiaAcademy
+            </a>
+            <!-- Menu Principal -->
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="#home"            class="nav-link">Início</a></li>
+                    <li><a href="#vocacoes"         class="nav-link">Vocações</a></li>
+                    <li><a href="#numeros"          class="nav-link">Servidor</a></li>
+                    <li><a href="#noticias-eventos" class="nav-link">Notícias</a></li>
+                    <li><a href="#noticias-eventos" class="nav-link">Eventos</a></li>
+                    <li><a href="#contato"          class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+            <!-- Botões de ações -->
+            <div class="header-actions">
+                <button id="theme-toggle" class="icon-btn" aria-label="Trocar Tema">
+                    <i class="ph ph-moon"></i>
+                </button>
+                <a href="#contato" class="btn btn-primary d-none-mobile">Criar Personagem</a>
+                <button class="icon-btn menu-btn" id="menu-btn" aria-label="Abrir Menu">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Banner Rotativo Hero -->
+        <section id="home" class="hero">
+            <div id="carousel" class="carousel">
+                <!-- Slide 1 -->
+                <div class="carousel-slide active">
+                    <img src="img/bugweek.jpg" alt="Tibia World" class="carousel-bg">
+                    <div class="carousel-content container">
+                        <span class="hero-badge">⚔ Bem-vindo a Tibia ⚔</span>
+                        <h1>Sua aventura em Tibia começa aqui</h1>
+                        <p>Guias completos do zero ao endgame, feitos por
+                            jogadores experientes do servidor.
+                        </p>
+                        <a href="#vocacoes" class="btn btn-primary">Ver Vocações</a>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-slide">
+                    <img src="img/spring2life.jpg" alt="Guilda" class="carousel-bg">
+                    <div class="carousel-content container">
+                        <span class="hero-badge">⚔ Comunidade ⚔</span>
+                        <h1>Junte-se à maior guilda de Tibia</h1>
+                        <p>Hunts em grupo, eventos semanais e
+                            suporte para iniciantes e veteranos.
+                        </p>
+                        <a href="#contato" class="btn btn-primary">Entrar na Guilda</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control prev" id="btn-prev">
+                <i class="ph ph-caret-left"></i>
+            </button>
+            <button class="carousel-control next" id="btn-next">
+                <i class="ph ph-caret-right"></i>
+            </button>
+        </section>
+
+        <!-- Seção: VOCAÇÕES -->
+        <section id="vocacoes" class="section bg-alt">
+            <div class="container">
+                <div class="section-title">
+                    <span class="section-badge">Escolha seu Caminho</span>
+                    <h2>Vocações</h2>
+                    <div class="line"></div>
+                    <p>Cada vocação tem seu papel na hunt e no PvP.
+                        Conheça as vantagens de cada uma e encontre a sua.
+                    </p>
+                </div>
+                <div class="grid grid-cards">
+                    <article class="card">
+                        <div class="card-icon-wrapper">
+                            <i class="ph ph-fire"></i>
+                        </div>
+                        <h3>Sorcerer</h3>
+                        <p>Domine a magia ofensiva, criação de runas e hunts ideias para o seu level.
+                            Guias de manaspend, runas e hunts para mages de todos os níveis.
+                        </p>
+                        <a href="#" class="btn btn-outline">Ver Guia</a>
+                    </article>
+                                        <article class="card">
+                        <div class="card-icon-wrapper">
+                            <i class="ph ph-plant"></i>
+                        </div>
+                        <h3>Druid</h3>
+                        <p>Domine a magia de suporte, melhor duo para sua vocação e hunts.
+                            Guias de manaspend, runas e hunts para druids de todos os níveis.
+                        </p>
+                        <a href="#" class="btn btn-outline">Ver Guia</a>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon-wrapper">
+                            <i class="ph ph-shield-check"></i>
+                        </div>
+                        <h3>Knight</h3>
+                        <p>O tank da equipe. Aprenda a fazer box, equipamentos
+                            e as melhores hunts solo e em party para knights.
+                        </p>
+                        <a href="#" class="btn btn-outline">Ver Guia</a>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon-wrapper">
+                            <i class="ph ph-crosshair"></i>
+                        </div>
+                        <h3>Paladin</h3>
+                        <p>Equilíbrio entre dano e sustain. Guias de distância,
+                            mana shield e as hunts mais rentáveis do servidor.
+                        </p>
+                        <a href="#" class="btn btn-outline">Ver Guia</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: NÚMEROS DO SERVIDOR -->
+        <section id="numeros" class="section stats-section">
+            <div class="section-title title-light">
+                <h2>O Servidor em Números</h2>
+                <div class="line"></div>
+            </div>
+            <div class="container">
+                <div class="grid grid-stats">
+                    <div class="stat-box">
+                        <i class="ph ph-users"></i>
+                        <span class="stat-num" data-target="416">0</span>
+                        <p>Jogadores Ativos</p>
+                    </div>
+                    <div class="stat-box">
+                        <i class="ph ph-scroll"></i>
+                        <span class="stat-num" data-target="19">0</span>
+                        <p>Guias Publicados</p>
+                    </div>
+                    <div class="stat-box">
+                        <i class="ph ph-flag-banner"></i>
+                        <span class="stat-num" data-target="7">0</span>
+                        <p>Guildas Ativas</p>
+                    </div>
+                    <div class="stat-box">
+                        <i class="ph ph-skull"></i>
+                        <span class="stat-num" data-target="1200">0</span>
+                        <p>Bosses Derrotados</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: NOTÍCIAS E EVENTOS -->
+        <section id="noticias-eventos" class="section">
+            <div class="container grid dual-layout">
+
+                <!-- Coluna I: Notícias -->
+                <div class="news-container" id="noticias">
+                    <h3 class="box-title">Últimas do Servidor</h3>
+
+                    <article class="news-item">
+                        <img src="img/forgotten.jpg" alt="Update" class="news-img">
+                        <div class="news-text">
+                            <h4><a href="https://tibia.fandom.com/wiki/Forgotten_Knowledge_Quest" target="_blank">Nova área: Forgotten Knowledge liberada</a></h4>
+                            <span class="news-date">20 de maio, 2026</span>
+                            <p>A atualização de maio trouxe novas hunts, itens raros e quests exclusivas para chars acima do level 250.</p>
+                        </div>
+                    </article>
+
+                    <article class="news-item">
+                        <img src="img/pvp.jpg" alt="Guilda" class="news-img">
+                        <div class="news-text">
+                            <h4>Torneio de PvP — inscrições abertas</h4>
+                            <span class="news-date">25 de maio, 2026</span>
+                            <p>O maior torneio de arena do servidor está com vagas abertas. Premios em Tibia Coins para os top 3.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Coluna II: Eventos -->
+                <div class="events-container" id="eventos">
+                    <h3 class="box-title">Próximos Eventos</h3>
+
+                    <!-- Evento 1 -->
+                    <div class="event-item">
+                        <div class="event-calendar">
+                            <span class="day">07</span>
+                            <span class="month">JUN</span>
+                        </div>
+                        <div class="event-text">
+                            <h4>Raid: Ferumbras Ascendant</h4>
+                            <span class="event-meta">
+                                <i class="ph ph-map-pin"></i> Yalahar
+                                <i class="ph ph-clock"></i> 21:00
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Evento 2 -->
+                    <div class="event-item">
+                        <div class="event-calendar">
+                            <span class="day">14</span>
+                            <span class="month">JUN</span>
+                        </div>
+                        <div class="event-text">
+                            <h4>Hunt em Grupo — Roshamuul</h4>
+                            <span class="event-meta">
+                                <i class="ph ph-map-pin"></i> Roshamuul
+                                <i class="ph ph-clock"></i> 20:00
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Evento 3 -->
+                    <div class="event-item">
+                        <div class="event-calendar">
+                            <span class="day">21</span>
+                            <span class="month">JUN</span>
+                        </div>
+                        <div class="event-text">
+                            <h4>Torneio PvP — Arena de Thais</h4>
+                            <span class="event-meta">
+                                <i class="ph ph-map-pin"></i> Thais
+                                <i class="ph ph-clock"></i> 19:00
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Seção: CONTATO -->
+        <section class="section bg-alt" id="contato">
+            <div class="container grid contact-layout">
+                <div class="contact-info">
+                    <h2>Pronto para aventurar?</h2>
+                    <p>Nossa equipe de veteranos está pronta para te ajudar a escolher sua vocação, equipamentos e primeiras hunts.</p>
+                    <div class="contact-list">
+                        <li><i class="ph ph-envelope-simple"></i>
+                            contato@tibiaacademy.com.br
+                        </li>
+                    </div>
+                    <div class="contact-list">
+                        <li><i class="ph ph-discord-logo"></i>
+                            discord.gg/tibiaacademy
+                        </li>
+                    </div>
+                    <div class="contact-list">
+                        <li><i class="ph ph-globe"></i>
+                            Servidor: TibiaAcademy.br — World Type: Open PvP
+                        </li>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form onsubmit="return false">
+                        <div class="input-group">
+                            <label for="nome">Nome do seu personagem</label>
+                            <input type="text" id="nome" placeholder="Ex: Molag Bal">
+                        </div>
+                        <div class="input-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" placeholder="seu.melhor@email.com">
+                        </div>
+                        <div class="input-group">
+                            <label for="vocacao">Vocação</label>
+                            <select id="vocacao">
+                                <option value="">Selecione sua vocação...</option>
+                                <option>Knight</option>
+                                <option>Paladin</option>
+                                <option>Sorcerer</option>
+                                <option>Druid</option>
+                            </select>
+                        </div>
+                                                <div class="input-group">
+                            <label for="servidor">Servidor</label>
+                            <select id="servidor">
+                                <option value="">Selecione seu servidor...</option>
+                                <option>Kersey (Open PvP)</option>
+                                <option>Irgorath (Semi-PvP)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-full">Criar personagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container grid footer-grid">
+            <div class="brand-col">
+                <a href="#" class="logo"><i class="ph ph-sword"></i> TibiaAcademy</a>
+                <p>O maior portal de guias e comunidade de Tibia do Brasil. Feito por jogadores, para jogadores.</p>
+            </div>
+            <!-- 2ª Coluna -->
+            <div class="link-col">
+                <h4>Navegar</h4>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#vocacoes">Vocações</a></li>
+                    <li><a href="#numeros">Servidor</a></li>
+                </ul>
+            </div>
+            <!-- 3ª Coluna -->
+            <div class="link-col">
+                <h4>Comunidade</h4>
+                <ul>
+                    <li><a href="#noticias">Notícias</a></li>
+                    <li><a href="#eventos">Eventos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <!-- 4ª Coluna -->
+            <div class="social-col">
+                <h4>Acompanhe</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Discord"><i class="ph ph-discord-logo"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+                    <a href="#" aria-label="Twitch"><i class="ph ph-twitch-logo"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 TibiaAcademy — Fansite não oficial. Tibia é marca registrada da CipSoft GmbH.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
